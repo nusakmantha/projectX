@@ -1,0 +1,99 @@
+@keyframes shrinkMedium {
+    from {width: 200px;}
+    to {width: 70px;}
+}
+@keyframes shrinkFull{
+	from {width:70px;}
+	to {width:0px;}
+}
+
+
+nav.side{
+	width:200px;
+	background-color:#23272d;
+	overflow:hidden;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 70px;
+	z-index:1;
+}
+}
+nav.side *{
+	color:#808b9c;
+}
+
+nav.side > ul {
+    display: block;
+    box-sizing: border-box;	
+}
+
+nav.side > ul > li a{
+	padding: 30px 0 30px 50px;
+	display:block;
+	border-left:5px #23272d solid;
+}
+nav.side > ul > li a:hover{
+	border-color:#4CAF50;
+	color:#fff;
+}
+
+nav.side > ul > li > a > span{
+	color:inherit;
+}
+
+nav.side > ul > li > a > svg{
+	margin:0 10px;
+}
+
+
+nav.side > ul > li.active > a {
+    background-color: #000;
+    border-color: #4CAF50;
+    color: #eaeaea;
+}
+
+
+@media only screen and (max-width: 768px){
+	
+
+	
+	nav.side{
+		width:70px;
+		top:50px;
+	}
+	
+	nav.side > ul > li > a > span {
+		display:none;
+	}
+	nav.side > ul{
+		padding:15px 0;
+	}
+	
+	nav.side > ul > li > a{
+		padding:15px;
+	}
+	
+}
+
+@media only screen and (max-width: 590px){
+	
+
+	
+	nav.side{
+		width:0px;
+		display:none;
+		z-index:3;
+	}
+	
+	nav.side.active{
+		display:block;
+		width:200px;
+		//box-shadow: 0 5px 13px 0px #000;
+	}
+	
+	nav.side > ul > li > a > span {
+		display:inline-block;
+	}
+	
+}

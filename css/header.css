@@ -1,0 +1,262 @@
+/* The animation code */
+@keyframes dropdown {
+    from {height: 0;}
+    to {height: 300px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+	font-family:Arial;
+	color:#999;
+	text-decoration:none;
+}
+
+nav.top{
+	width:100%;
+	overflow:auto;
+	height:70px;
+	overflow:visible;
+	box-shadow: 0 0 10px #e6e6e6;
+}
+
+nav.top ul{
+	display:block;
+	height:inherit;
+}
+nav.top > ul > li{
+	display:inline-block;
+	float:left;
+	height:inherit;
+	cursor:pointer;
+}
+nav.top > ul.left{
+	float:left;
+	color:#bfbfbf;
+}
+
+nav.top > ul.left > li.logo a.logo-mini{
+	display:none;
+}
+
+nav.top > ul.left > li.logo{
+	box-sizing:border-box;
+}
+
+nav.top > ul.left > li.logo{
+	padding:15px 10px;
+}
+
+nav.top > ul.left > li.search *{
+	float:left;
+}
+
+nav.top > ul.left > li.search{
+	box-sizing:border-box;
+	padding:25px;
+	border-left: 1px solid #f1f1f1;
+}
+
+nav.top > ul.left > li.search > svg{
+	margin:0 10px;
+}
+nav.top > ul.left > li.search > form .search-box{
+	border:none;
+	outline:none;
+	font-size:15px;
+	margin: 0 0 0 20px;
+}
+
+nav.top > ul.right{
+	float:right;
+	display:block;
+	overflow:auto;
+	height:inherit;
+}
+nav.top > ul.right > li{
+    padding:25px;
+	box-sizing:border-box;
+	border-left:1px solid #f1f1f1;
+	border-right:none;
+	color:#555;
+}
+nav.top > ul.right > li.user span{
+	margin:0 10px;
+}
+
+nav.top > ul.right > li span.tooltip{
+	display:none;
+	margin:0 10px;
+}
+
+nav.top .tool-toggle{
+	display:none;
+	box-sizing:border-box;
+	padding:15px;
+	border-left: 1px solid #f1f1f1;
+	height:inherit;
+}
+
+nav.top > ul.right > li.user.active{
+	background-color: #f1f1f1;
+}
+
+nav.top > ul.right > li > ul.user-info{
+	display:none;
+}
+
+nav.top > ul.right > li > ul.user-info.active{
+	
+	padding:10px;
+	position:absolute;
+	overflow: auto;
+    height: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 1px #f1f1f1;
+	box-sizing:border-box;
+	right:0;
+	display:block;
+	
+	
+}
+nav.top > ul.right > li > ul.user-info > li a{
+	padding:10px;
+}
+nav.top > ul.right > li > ul.user-info > li{
+	padding:10px 5px;
+}
+
+
+nav.top > ul > li.aside-toggle{
+	display:none;
+}
+
+@media only screen and (max-width: 768px) {
+    nav.top > ul.right > li{
+		float:none;
+		display:block;
+		border-bottom:1px solid #f1f1f1;
+	}
+	
+	nav.top {
+		height:50px;
+	}
+	
+	nav.top > ul{
+		padding:0px !important;
+	}
+	nav.top > ul > li{
+		padding:15px !important;
+	}
+	
+	nav.top > ul.right{
+		position:absolute;
+		left:0;
+		top:50px;
+		padding-top:30px;
+		width:100%;
+		box-sizing:border-box;
+		z-index:2;
+	}
+	nav.top > ul.right > li span.tooltip{
+		display:inline;
+	}
+	
+	nav.top .tool-toggle{
+		display:block;
+		padding:17.5px;
+		float:right;
+		cursor:pointer;
+	}
+	
+	nav.top > ul.right > li.user > .info-toggle{
+		float:right;
+	}
+	
+	nav.top .tool-toggle.active{
+		background-color:#f1f1f1;
+		color:#fff;
+	}
+	
+	nav.top > ul.right{
+		display:none;
+		background-color:#fff;
+	}
+	
+/* */
+	nav.top > ul.right{
+		height:0;
+		height:auto;
+	}
+
+	nav.top > ul.right.active{
+		display:block;
+		height:auto;
+		margin-top: 0px;
+		border-top: 1px solid #f1f1f1;
+		padding-top:0;
+		box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+	}
+	
+/* */
+	
+	nav.top > ul.right > li > ul.user-info.active{
+		position:relative;
+		background-color: #f1f1f1;
+	}
+	
+}
+
+@media only screen and (max-width: 590px){
+	nav.top > ul.left > li.logo img{
+		width:40px;
+		height:40px;
+	}
+	
+	nav.top > ul.left > li.logo{
+		padding:5px !important;
+	}
+	
+	nav.top > ul.left > li.search form .search-box{
+		width:100px;
+	}
+	nav.top > ul.left > li.logo a.logo-mini{
+		display:block;
+	}
+	nav.top > ul.left > li.logo a.logo{
+		display:none;
+	}
+	nav.top > ul > li.aside-toggle{
+		display:block;
+		border-right:1px solid #f1f1f1;
+		box-sizing:border-box;
+		padding:17.5px !important;
+	}
+	nav.top > ul > li.aside-toggle.active{
+		background-color:#23272d;
+		width:201px;
+		//box-shadow: 0 5px 13px 0px #000;
+	}
+	
+	nav.top {
+		overflow:hidden;
+	}
+	
+}
